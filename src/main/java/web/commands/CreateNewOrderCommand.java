@@ -35,8 +35,7 @@ public class CreateNewOrderCommand extends CommandProtectedPage
         Order newOrder =  orderFacade.createOrder(u1.getId(), length, width, date, subtotal, roof_type);
         request.setAttribute("newOrder", newOrder);
 
-
-            return pageToShow;
+        return pageToShow;
     }
 
 

@@ -18,6 +18,13 @@ public class User
     private String phone;
     private String address;
     private String postcode;
+    private int credit;
+    private int date;
+    private int length;
+    private int width;
+    private int price;
+    private String roof_type;
+    private int orderId;
 
     public User(int id, String email, String password, String role, String name, String phone, String address, String postcode) {
         this.id = id;
@@ -30,15 +37,32 @@ public class User
         this.postcode = postcode;
     }
 
-    public User(int id, String email, String password, String role) {
+    public User(int id, String email, String address, String name, String phone, int credit) {
         this.id = id;
+        this.name = name;
+        this.address = address;
+        this.phone = phone;
         this.email = email;
-        this.password = password;
-        this.role = role;
+        this.credit = credit;
     }
 
 
+    public User(int date, int length, int width, int price, String roof_type) {
+        this.date = date;
+        this.length = length;
+        this.width = width;
+        this.price = price;
+        this.roof_type = roof_type;
+    }
 
+    public User(int orderid, int date, int length, int width, int price, String roof_type) {
+        this.orderId = orderid;
+        this.date = date;
+        this.length = length;
+        this.width = width;
+        this.price = price;
+        this.roof_type = roof_type;
+    }
 
     @Override
     public String toString() {
@@ -107,5 +131,61 @@ public class User
 
     public void setPostcode(String postcode) {
         this.postcode = postcode;
+    }
+
+    public int getCredit() {
+        return credit;
+    }
+
+    public void setCredit(int credit) {
+        this.credit = credit;
+    }
+
+    public int getDate() {
+        return date;
+    }
+
+    public void setDate(int date) {
+        this.date = date;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public String getRoof_type() {
+        return roof_type;
+    }
+
+    public void setRoof_type(String roof_type) {
+        this.roof_type = roof_type;
+    }
+
+    public int getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
     }
 }

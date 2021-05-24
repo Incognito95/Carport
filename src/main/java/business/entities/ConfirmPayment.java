@@ -28,13 +28,6 @@ public class ConfirmPayment {
         this.city = city;
     }
 
-    public ConfirmPayment(String name, String address, int phone, String email) {
-        this.name = name;
-        this.address = address;
-        this.phone = phone;
-        this.email = email;
-    }
-
 
 
     public String getEmail() {

@@ -23,21 +23,16 @@
         </div>
 
 
-        <h3 class="mt-5">Ordre detaljer</h3>
+        <h3 class="mt-5">Ordre detaljer:</h3>
 
-        <c:forEach var="orderconfirmation" items="${requestScope.ordercofirmation}">
-            <p>Købsdato: ${orderconfirmation.date}</p>
-            <p>Betalt beløb: ${orderconfirmation.price}</p>
-            <p>Forsendelsesinfo:</p>
-            <p>${orderconfirmation.address}</p>
-            <hr>
-            <p>Varetype: ${orderconfirmation.roof_type}</p>
-            <hr>
-            <p>Bredde (CM): ${orderconfirmation.width}</p>
-            <hr>
-            <p>Længde (CM): ${orderconfirmation.length}</p>
-            <hr>
-        </c:forEach>
+        ${requestScope.orderConfirmation.orderid}
+        ${requestScope.orderConfirmation.date}
+        ${requestScope.orderConfirmation.length}
+        ${requestScope.orderConfirmation.width}
+        ${requestScope.orderConfirmation.price}
+        ${requestScope.orderConfirmation.roof_type}
+
+
 
 
 

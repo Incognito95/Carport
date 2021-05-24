@@ -1,29 +1,30 @@
 package business.entities;
 
-import java.sql.Timestamp;
 
 public class OrderConfirmation {
-    private Timestamp date;
+    private int date;
     private int price;
     private String address;
     private int width;
     private int length;
     private String roof_type;
+    private int order_id;
 
-    public OrderConfirmation(Timestamp date, int price, String address, int width, int length, String roof_type) {
+
+    public OrderConfirmation(int order_id, int date, int price, int length, int width, String roof_type) {
+        this.order_id = order_id;
         this.date = date;
         this.price = price;
-        this.address = address;
-        this.width = width;
         this.length = length;
+        this.width = width;
         this.roof_type = roof_type;
     }
 
-    public Timestamp getDate() {
+    public int getDate() {
         return date;
     }
 
-    public void setDate(Timestamp date) {
+    public void setDate(int date) {
         this.date = date;
     }
 
@@ -65,5 +66,13 @@ public class OrderConfirmation {
 
     public void setRoof_type(String roof_type) {
         this.roof_type = roof_type;
+    }
+
+    public int getOrderid() {
+        return order_id;
+    }
+
+    public void setOrderid(int order_id) {
+        this.order_id = order_id;
     }
 }
