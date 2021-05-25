@@ -43,10 +43,7 @@ public class CalcCarportMapper {
 
         //2. Ud fra kundens forespørgsel i orders(780 - 120cm = 660)
         // ( 660 / 310 = 2,12 --> 3 stolper. 3 x 2 = 6(qty).
-        int showOrder = orderFacade.showAllOrders().get(80).getLength(); // length 360 from id 1
-        int cm = 360; // 360 cm
-        int result = showOrder - cm;  // 780 - 360
-        System.out.println("result is: " + result); // 420
+       // Material material = materialFacade;
 
         // ( 660 / 310 = 2,12 --> 3 stolper. 3 x 2 = 6(qty).
         int show_order = orderFacade.showAllOrders().get(1).getLength();

@@ -131,17 +131,13 @@ public class UserMapper
                 if (rs.next()) {
 
                     userid = rs.getInt("user_id");
-                    String name = "Daniel";
-                    String address = "Nørgaardsvej 30 2800, Kongens Lyngby";
-                    String phone = "36154504";
-                    String email = "kontakt@cphbusiness.dk";
-                    String role = rs.getString("role");
-                  //  String password = rs.getString("password");
-                    String password = "";
-                  //  String address = rs.getString("address");
+                    String name = rs.getString("name");
+                    String address = rs.getString("address");
+                    String phone = rs.getString("phone");
+                    String email = rs.getString("email");
+                    int credit = rs.getInt("credit");
 
-                    user = new User(userid, email, password, role, name, phone, password, address);
-                 //   int id, String email, String password, String role, String name, String phone)
+                    user = new User(userid, name, address, phone, email, credit);
 
 
                 } else
@@ -154,4 +150,5 @@ public class UserMapper
 
         return user;
     }
+
 }

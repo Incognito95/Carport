@@ -1,19 +1,14 @@
 package web.commands;
 
-import business.entities.ConfirmPayment;
-import business.entities.Order;
+
 import business.entities.OrderConfirmation;
 import business.entities.User;
-import business.exceptions.UserException;
 import business.services.OrderConfirmationFacade;
-import business.services.OrderFacade;
-import business.services.UserFacade;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.sql.SQLException;
-import java.util.List;
+
 
 public class OrderConfirmationCommand extends CommandProtectedPage
 {
@@ -24,10 +19,14 @@ public class OrderConfirmationCommand extends CommandProtectedPage
     }
 
     @Override
-    public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException, SQLException {
+    public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
-        List<OrderConfirmation> ordercofirmation = orderConfirmationFacade.showOrderConfirmation();
-        request.setAttribute("ordercofirmation", ordercofirmation);
+        HttpSession session = request.getSession();
+        OrderConfirmation order = (OrderConfirmation) session.getAttribute("order");
+
+
+        OrderConfirmation orderConfirmation = orderConfirmationFacade.getOrderById(order.getOrderid());
+        request.setAttribute("orderConfirmation", orderConfirmation);
 
         return pageToShow;
     }

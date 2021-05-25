@@ -29,4 +29,10 @@ public class CarportItemFacade {
 
     }
 
+    public CarportItem AddCarportItem(int order_id, int length, int width, int quantity, int price, String description) throws UserException {
+        CarportItem carportItem = new CarportItem(order_id, length, width, quantity, price, description);
+        carportItem = carportItemMapper.AddCarportItem(carportItem);
+        return carportItem;
+    }
+
 }

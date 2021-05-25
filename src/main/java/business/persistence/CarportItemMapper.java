@@ -47,7 +47,36 @@ public class CarportItemMapper {
 
     }
 
-    public void addItem() {
+    public CarportItem AddCarportItem(CarportItem carportItem) throws UserException {
 
+
+        try (Connection connection = database.connect())
+        {
+            String sql = "INSERT INTO carport_item SET quantity = ?, description = ?, length = ?, width = ?, price = ?";
+
+            try (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS))
+            {
+                ps.setInt(1, carportItem.getQuantity());
+                ps.setString(2, carportItem.getDescription());
+                ps.setInt(3, carportItem.getLength());
+                ps.setInt(4, carportItem.getWidth());
+                ps.setInt(5, carportItem.getPrice());
+                ps.setInt(5, carportItem.getOrder_id());
+
+                ps.executeUpdate();
+                ResultSet ids = ps.getGeneratedKeys();
+                ids.next();
+
+            }
+            catch (SQLException ex)
+            {
+                throw new UserException(ex.getMessage());
+            }
+        }
+        catch (SQLException ex)
+        {
+            throw new UserException(ex.getMessage());
+        }
+        return carportItem;
     }
 }

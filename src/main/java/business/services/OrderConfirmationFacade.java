@@ -1,13 +1,10 @@
 package business.services;
 
+import business.entities.Order;
 import business.entities.OrderConfirmation;
-import business.entities.Requests;
-import business.exceptions.UserException;
+import business.entities.User;
 import business.persistence.Database;
 import business.persistence.OrderConfirmationMapper;
-
-import java.sql.SQLException;
-import java.util.List;
 
 
 public class OrderConfirmationFacade {
@@ -18,7 +15,9 @@ public class OrderConfirmationFacade {
         this.orderConfirmationMapper = new OrderConfirmationMapper(database);
     }
 
-    public List<OrderConfirmation> showOrderConfirmation() throws UserException {
-        return orderConfirmationMapper.showOrderConfirmation();
+    public OrderConfirmation getOrderById(int orderid) throws Exception {
+        return orderConfirmationMapper.getOrderById(orderid);
     }
+
+
 }

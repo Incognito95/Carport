@@ -11,7 +11,10 @@
     </jsp:attribute>
 
     <jsp:body>
+
         <h1>weporkwperoi</h1>
+
+        ${requestScope.addCarportItem.description}
 
 
 

@@ -1,8 +1,11 @@
 package web.commands;
 
 import business.entities.ConfirmPayment;
+import business.entities.Order;
 import business.entities.User;
+import business.persistence.OrderConfirmationMapper;
 import business.services.ConfirmPaymentFacade;
+import business.services.OrderConfirmationFacade;
 import business.services.UserFacade;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,6 +34,7 @@ public class ConfirmPaymentCommand extends CommandProtectedPage
         request.setAttribute("contactInformation", contactInformation);
         List<ConfirmPayment> confirmPayment = confirmPaymentFacade.ViewAllConfirmedPayments();
         request.setAttribute("confirmPayment", confirmPayment);
+
 
 
         return pageToShow;
