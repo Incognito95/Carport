@@ -16,7 +16,6 @@ public class SeeProducts {
         this.status = status;
     }
 
-
     public int getOrder_id() {
         return order_id;
     }

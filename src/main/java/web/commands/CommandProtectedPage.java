@@ -12,7 +12,6 @@ public class CommandProtectedPage extends Command
     public String role;
     public String pageToShow;
 
-
     public CommandProtectedPage(String pageToShow, String role)
     {
         this.pageToShow = pageToShow;

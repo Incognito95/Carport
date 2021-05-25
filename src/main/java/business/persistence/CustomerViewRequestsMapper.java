@@ -33,7 +33,6 @@ public class CustomerViewRequestsMapper {
                     String roof_type = rs.getString("roof_type");
                     String name = rs.getString("email");
                     String status = rs.getString("status");
-
                     carportItems.add(new Requests(order_id, width, length, roof_type, name, status));
                 }
                 return carportItems;
@@ -42,5 +41,4 @@ public class CustomerViewRequestsMapper {
             }
         }
     }
-
 }

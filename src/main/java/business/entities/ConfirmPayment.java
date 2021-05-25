@@ -28,8 +28,6 @@ public class ConfirmPayment {
         this.city = city;
     }
 
-
-
     public String getEmail() {
         return email;
     }

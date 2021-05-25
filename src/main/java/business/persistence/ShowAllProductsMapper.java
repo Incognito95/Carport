@@ -1,9 +1,6 @@
 package business.persistence;
-
-import business.entities.CarportItem;
 import business.entities.SeeProducts;
 import business.exceptions.UserException;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +28,6 @@ public class ShowAllProductsMapper {
                     String roof_type = rs.getString("roof_type");
                     String name = rs.getString("email");
                     String status = rs.getString("roof_type");
-
                     seeProducts.add(new SeeProducts(width, length, roof_type, name, status));
                 }
                 return seeProducts;
@@ -42,10 +38,8 @@ public class ShowAllProductsMapper {
     }
 
     public void getTotalPrice() {
-
     }
 
     public void addItem() {
-
     }
 }

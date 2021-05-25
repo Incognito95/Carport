@@ -18,6 +18,5 @@ public class SeeSellersFacade {
 
     public List<SeeAllSellers> ShowAllSellers() throws UserException {
         return seeAllSellersMapper.ShowAllSellers();
-
     }
 }

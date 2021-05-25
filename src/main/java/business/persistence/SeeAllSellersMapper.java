@@ -1,6 +1,4 @@
 package business.persistence;
-
-
 import business.entities.SeeAllSellers;
 import business.exceptions.UserException;
 
@@ -16,7 +14,6 @@ public class SeeAllSellersMapper
         this.database = database;
     }
 
-
     public List<SeeAllSellers> ShowAllSellers() throws UserException {
         List<SeeAllSellers> SeeSellers = new ArrayList<>();
 
@@ -27,7 +24,6 @@ public class SeeAllSellersMapper
             try (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS))
             {
                 ResultSet rs = ps.executeQuery();
-
                 while (rs.next()) {
                     int user_id = rs.getInt("user_id");
                     String name = rs.getString("email");
@@ -39,7 +35,6 @@ public class SeeAllSellersMapper
                     int postcode = rs.getInt("postcode");
                     int credit = rs.getInt("credit");
                     String city = rs.getString("city");
-
                     SeeSellers.add(new SeeAllSellers(user_id, name, address, phone, email, password, role, postcode, credit, city));
                 }
                 return SeeSellers;
@@ -54,9 +49,4 @@ public class SeeAllSellersMapper
             throw new UserException(ex.getMessage());
         }
     }
-
-
-
-
-
 }

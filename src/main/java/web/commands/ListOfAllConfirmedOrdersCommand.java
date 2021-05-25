@@ -25,17 +25,10 @@ public class ListOfAllConfirmedOrdersCommand extends CommandProtectedPage
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException, SQLException {
 
-
-
         List<ConfirmedOrders> confirmedOrders = confirmedOrdersFacade.ListOfAllConfirmedOrders();
         request.setAttribute("confirmedOrders", confirmedOrders);
 
-
-
         return pageToShow;
-
     }
-
-
 }
 

@@ -24,6 +24,4 @@ public class ConfirmPaymentFacade {
     public List<ConfirmPayment> ViewAllConfirmedPayments() throws UserException, SQLException {
         return confirmPaymentMapper.ViewAllConfirmedPayments();
     }
-
-
 }

@@ -94,10 +94,9 @@ public class showSVGCommand extends CommandUnprotectedPage
         {
             svgInner.addRect(100 + 50 * x,0,600,4);
         }
-
         svgOuter.addSvg(svgInner);
-
         request.setAttribute("drawing", svgOuter.toString());
+
         return pageToShow;
     }
 }

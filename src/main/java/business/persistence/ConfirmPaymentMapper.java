@@ -37,7 +37,6 @@ public class ConfirmPaymentMapper {
                     int postcode = rs.getInt("postcode");
                     String city = rs.getString("city");
                     String status = rs.getString("status");
-
                     confirmPayment.add(new ConfirmPayment(order_id, width, length, roof_type, name, status, credit, address, phone, postcode, city));
                 }
                 return confirmPayment;
@@ -46,7 +45,4 @@ public class ConfirmPaymentMapper {
             }
         }
     }
-
-
-
 }

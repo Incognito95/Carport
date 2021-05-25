@@ -17,7 +17,6 @@ public class AddNewSellerFacade {
         this.addNewSellerMapper = new AddNewSellerMapper(database);
     }
 
-
     public AddSeller AddNewSeller(String name, String address, String phone, String email, String password) throws UserException {
         AddSeller seller = new AddSeller(name, address, phone, email, password);
         seller = addNewSellerMapper.AddNewSeller(seller);

@@ -1,6 +1,5 @@
 package business.entities;
 
-
 public class OrderConfirmation {
     private int date;
     private int price;
@@ -9,7 +8,6 @@ public class OrderConfirmation {
     private int length;
     private String roof_type;
     private int order_id;
-
 
     public OrderConfirmation(int order_id, int date, int price, int length, int width, String roof_type) {
         this.order_id = order_id;

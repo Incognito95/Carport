@@ -1,7 +1,4 @@
 package business.entities;
-
-import com.sun.tools.corba.se.idl.constExpr.Times;
-
 import java.sql.Time;
 import java.sql.Timestamp;
 
@@ -40,7 +37,6 @@ public class Order {
         this.width = price;
         this.roof_type = roof_type;
     }
-
 
     public int getCustomer_id() {
         return customer_id;

@@ -13,8 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
-public class AddNewSellerCommand extends CommandProtectedPage
-{
+public class AddNewSellerCommand extends CommandProtectedPage {
     private AddNewSellerFacade addNewSellerFacade = new AddNewSellerFacade(database);
 
     public AddNewSellerCommand(String pageToShow, String role) {
@@ -22,21 +21,15 @@ public class AddNewSellerCommand extends CommandProtectedPage
     }
 
     @Override
-    public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException
-    {
-
+    public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException {
         String name = request.getParameter("name");
         String address = request.getParameter("address");
         String phone = request.getParameter("phone");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-
-        AddSeller addSeller =  addNewSellerFacade.AddNewSeller(name, address, phone, email, password);
+        AddSeller addSeller = addNewSellerFacade.AddNewSeller(name, address, phone, email, password);
         request.setAttribute("addseller", addSeller);
-
 
         return pageToShow;
     }
-
-
 }

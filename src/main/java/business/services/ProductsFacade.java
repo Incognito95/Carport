@@ -18,6 +18,5 @@ public class ProductsFacade {
 
     public List<SeeProducts> ShowAllProductsMapper() throws UserException, SQLException {
         return showAllProductsMapper.ShowAllProducts();
-
     }
 }

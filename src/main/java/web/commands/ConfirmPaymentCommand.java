@@ -18,7 +18,6 @@ public class ConfirmPaymentCommand extends CommandProtectedPage
     private UserFacade userFacade = new UserFacade(database);
     private ConfirmPaymentFacade confirmPaymentFacade = new ConfirmPaymentFacade(database);
 
-
     public ConfirmPaymentCommand(String pageToShow, String role) {
         super(pageToShow, role);
     }
@@ -27,20 +26,13 @@ public class ConfirmPaymentCommand extends CommandProtectedPage
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         HttpSession session = request.getSession();
-
         User user = (User) session.getAttribute("user");
-
         User contactInformation = userFacade.getUserById(user.getId());
         request.setAttribute("contactInformation", contactInformation);
         List<ConfirmPayment> confirmPayment = confirmPaymentFacade.ViewAllConfirmedPayments();
         request.setAttribute("confirmPayment", confirmPayment);
 
-
-
         return pageToShow;
-
     }
-
-
 }
 

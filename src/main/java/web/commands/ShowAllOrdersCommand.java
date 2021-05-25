@@ -21,13 +21,10 @@ public class ShowAllOrdersCommand extends CommandProtectedPage
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException
     {
-
              List<Order> orders = orderFacade.showAllOrders();
             request.setAttribute("orders", orders);
+
             return pageToShow;
-
     }
-
-
 }
 

@@ -30,7 +30,6 @@ public class ConfirmedOrdersMapper {
                     String roof_type = rs.getString("roof_type");
                     String name = rs.getString("email");
                     String status = rs.getString("status");
-
                     confirmedOrders.add(new ConfirmedOrders(width, length, roof_type, name, status));
                 }
                 return confirmedOrders;
@@ -39,7 +38,6 @@ public class ConfirmedOrdersMapper {
             }
         }
     }
-
     public void getTotalPrice() {
 
     }

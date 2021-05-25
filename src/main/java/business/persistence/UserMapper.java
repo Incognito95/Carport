@@ -1,10 +1,6 @@
 package business.persistence;
-
-import business.entities.ConfirmPayment;
-import business.entities.Order;
 import business.exceptions.UserException;
 import business.entities.User;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +41,6 @@ public class UserMapper
             throw new UserException(ex.getMessage());
         }
     }
-
     public User login(String email, String password) throws UserException
     {
         try (Connection connection = database.connect())
@@ -79,8 +74,6 @@ public class UserMapper
             throw new UserException("Connection to database could not be established");
         }
     }
-
-
     public List<User> showAllUsers() throws UserException {
 
         List<User> users = new ArrayList<>();
@@ -92,7 +85,6 @@ public class UserMapper
             try (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS))
             {
                 ResultSet rs = ps.executeQuery();
-
                 while(rs.next()) {
                     int user_id = rs.getInt("user_id");
                     String name = rs.getString("name");
@@ -102,9 +94,7 @@ public class UserMapper
                     String phone = rs.getString("phone");
                     String email = rs.getString("email");
                     String role = rs.getString("role");
-
                     users.add(new User(user_id, email, password, role, name, phone, address, postcode));
-
                 }
                 return users;
             }
@@ -118,7 +108,6 @@ public class UserMapper
             throw new UserException(ex.getMessage());
         }
     }
-
     public User getUserById(int userid) throws Exception {
         User user;
         try (Connection connection = database.connect()) {
@@ -129,26 +118,19 @@ public class UserMapper
                 ps.setInt(1, userid);
                 ResultSet rs = ps.executeQuery();
                 if (rs.next()) {
-
                     userid = rs.getInt("user_id");
                     String name = rs.getString("name");
                     String address = rs.getString("address");
                     String phone = rs.getString("phone");
                     String email = rs.getString("email");
                     int credit = rs.getInt("credit");
-
                     user = new User(userid, name, address, phone, email, credit);
-
-
                 } else
                 {
                     throw new UserException("der sket en fejl...");
                 }
-
             }
         }
-
         return user;
     }
-
 }

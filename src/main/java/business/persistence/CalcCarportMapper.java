@@ -22,17 +22,13 @@ public class CalcCarportMapper {
 
     public CalcCarportMapper(MaterialFacade materialFacade) {
         this.materialFacade = materialFacade;
-
     }
-
     // stolper
     // rem
     // tag
     // uden skur
     // calculated carport items goes into carport_item table
     // put calculations in a list
-
-
     //Overskrift "Udregnng af stolper"
     public List<CarportItem> calcPost() throws UserException {
         List<CarportItem> carportItems = new ArrayList<>();
@@ -40,17 +36,14 @@ public class CalcCarportMapper {
         //1. Hent Part via id (henter id_nr 10 = stolpe)
         Material material = materialFacade.getCarportItemById(10);
 
-
         //2. Ud fra kundens forespørgsel i orders(780 - 120cm = 660)
         // ( 660 / 310 = 2,12 --> 3 stolper. 3 x 2 = 6(qty).
-       // Material material = materialFacade;
-
+        // Material material = materialFacade;
         // ( 660 / 310 = 2,12 --> 3 stolper. 3 x 2 = 6(qty).
         int show_order = orderFacade.showAllOrders().get(1).getLength();
         int centi_meter = 120;
         int divide_show_order_centimeter = show_order / centi_meter; // 420 / 360
         int quantity = show_order / centi_meter * 3;
-
         System.out.println("Dividing the result of 420 with the length equals to: " + divide_show_order_centimeter); // 420 / 360 = ...
         System.out.println("result of length divided by 310 is: " + quantity); // // 420 / 360 * 3 - gange med 3 fordi vi vil ha 3 stolper
 
@@ -61,18 +54,12 @@ public class CalcCarportMapper {
         int calculate_price = price_per_unit * quantity_of_three_posts;
         System.out.println("The calculated price of quantity times by price per unit is: " + calculate_price);
 
-
         //4.  Hard code beskrivelse: String des = "Stolpe til tag"
         String description = "Stolper nedgraves 90 cm. i jord";
 
-
         //5. Byg CarportItem (length, qty,  price, des)
-
         //6. lave en CarportItem Array -> add(new CarportItem)
-
-
         //7. Gemmer enkelte plads i array i DB
-
         // Method for the actual calculations on how many post there has to be when the length of the carport is X.
         // Maximum distance between 2 posts is 3,1 meters.
         // First posts is 1 meter in from the front of the beam.
@@ -98,9 +85,6 @@ public class CalcCarportMapper {
         // To calculate the amount of rafters needed do:
         // ( Width cm / 55 cm = fx. 14,15 -> 15 rafters.
         // Return  15 rafters with the length of 600cm to CalcCarport.java Class.
-
     }
-
-
 }
 

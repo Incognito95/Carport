@@ -1,6 +1,5 @@
 package business.services;
 
-import business.entities.Order;
 import business.entities.User;
 import business.persistence.Database;
 import business.persistence.OrderConfirmationMapper;
@@ -32,7 +31,6 @@ public class UserFacade
         return user;
     }
 
-
     public List<User> showAllUsers() throws UserException {
         return userMapper.showAllUsers();
     }
@@ -40,12 +38,4 @@ public class UserFacade
     public User getUserById(int userid) throws Exception {
         return userMapper.getUserById(userid);
     }
-
-
-
-
-
-
-
-
 }

@@ -21,13 +21,10 @@ public class ShowAllProductsCommand extends CommandUnprotectedPage
     }
 
     @Override
-    public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException, SQLException {
-
-
+    public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException, SQLException
+    {
         List<SeeProducts> seeProducts = productsFacade.ShowAllProductsMapper();
         request.setAttribute("seeProducts", seeProducts);
-
         return pageToShow;
-
     }
 }

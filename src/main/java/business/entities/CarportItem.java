@@ -9,10 +9,6 @@ public class CarportItem {
     private String description;
     private int width;
 
-
-
-
-
     public CarportItem(int order_id, int item_id, int length, int width, int quantity, int price, String description) {
         this.order_id = order_id;
         this.item_id = item_id;
@@ -32,9 +28,6 @@ public class CarportItem {
         this.description = description;
         this.width = width;
     }
-
-
-
 
     public int getOrder_id() {
         return order_id;

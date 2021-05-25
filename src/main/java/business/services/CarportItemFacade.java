@@ -9,7 +9,6 @@ import business.persistence.Database;
 import java.sql.SQLException;
 import java.util.List;
 
-
 public class CarportItemFacade {
 
     private CarportItemMapper carportItemMapper;
@@ -21,12 +20,10 @@ public class CarportItemFacade {
 
     public List<CarportItem> CarportItemFacade() throws UserException, SQLException {
         return carportItemMapper.CarportItemMap();
-
     }
 
     public List<CarportItem> calcPost() throws UserException {
         return calcCarportMapper.calcPost();
-
     }
 
     public CarportItem AddCarportItem(int order_id, int length, int width, int quantity, int price, String description) throws UserException {
@@ -34,5 +31,4 @@ public class CarportItemFacade {
         carportItem = carportItemMapper.AddCarportItem(carportItem);
         return carportItem;
     }
-
 }

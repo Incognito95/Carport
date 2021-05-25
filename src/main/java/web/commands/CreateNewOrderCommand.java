@@ -23,20 +23,16 @@ public class CreateNewOrderCommand extends CommandProtectedPage
     public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException
     {
         HttpSession session = request.getSession();
+
         User u1 = (User) session.getAttribute("user");
         long date = System.currentTimeMillis();
-
-
         int width = Integer.parseInt(request.getParameter("width"));
         int length = Integer.parseInt(request.getParameter("length"));
         String roof_type = request.getParameter("roof_type");
         int subtotal = 0;
-
         Order newOrder =  orderFacade.createOrder(u1.getId(), length, width, date, subtotal, roof_type);
         request.setAttribute("newOrder", newOrder);
 
         return pageToShow;
     }
-
-
 }

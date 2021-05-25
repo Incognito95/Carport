@@ -7,7 +7,6 @@ import business.persistence.Database;
 import java.sql.SQLException;
 import java.util.List;
 
-
 public class CustomerRequestsFacade {
 
     private CustomerViewRequestsMapper customerViewRequestsMapper;

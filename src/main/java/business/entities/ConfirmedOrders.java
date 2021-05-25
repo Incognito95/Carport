@@ -16,7 +16,6 @@ public class ConfirmedOrders {
         this.status = status;
     }
 
-
     public int getLength() {
         return length;
     }

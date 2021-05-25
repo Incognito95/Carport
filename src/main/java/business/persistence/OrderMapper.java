@@ -27,14 +27,11 @@ public class OrderMapper
                 ps.setInt(1, order.getLength());
                 ps.setInt(2, order.getWidth());
                 ps.setString(3, order.getRoof_type());
-
-
                 ps.executeUpdate();
                 ResultSet ids = ps.getGeneratedKeys();
                 ids.next();
                 int id = ids.getInt(1);
                 order.setOrder_id(id);
-
             }
             catch (SQLException ex)
             {
@@ -47,7 +44,6 @@ public class OrderMapper
         }
         return order;
     }
-
     public List<Order> showAllOrders() throws UserException {
         List<Order> orders = new ArrayList<>();
 
@@ -58,7 +54,6 @@ public class OrderMapper
             try (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS))
             {
                 ResultSet rs = ps.executeQuery();
-
                 while (rs.next()) {
                     int customer_id = rs.getInt("customer_id");
                     int order_id = rs.getInt("order_id");
@@ -67,7 +62,6 @@ public class OrderMapper
                     long date = rs.getInt("date");
                     int sub_total = rs.getInt("subtotal");
                     String roof_type = rs.getString("roof_type");
-
                     orders.add(new Order(customer_id, length, width, date, sub_total, roof_type, order_id));
                 }
                 return orders;
@@ -82,7 +76,4 @@ public class OrderMapper
             throw new UserException(ex.getMessage());
         }
     }
-
-
-
 }

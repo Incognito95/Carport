@@ -10,14 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
 import java.util.List;
 
-public class ShowAllCarportItemsCommand extends Command
-{
+public class ShowAllCarportItemsCommand extends Command {
     public String role;
     public String pageToShow;
     private CarportItemFacade carportItemFacade = new CarportItemFacade(database);
 
-    public ShowAllCarportItemsCommand(String pageToShow, String role)
-    {
+    public ShowAllCarportItemsCommand(String pageToShow, String role) {
         this.pageToShow = pageToShow;
         this.role = role;
 
@@ -33,25 +31,19 @@ public class ShowAllCarportItemsCommand extends Command
         int price = Integer.parseInt(request.getParameter("price"));
         int order_id = Integer.parseInt(request.getParameter("order_id"));
 
-
-
-
-
         List<CarportItem> carportItems = carportItemFacade.CarportItemFacade();
         request.setAttribute("carportItems", carportItems);
 
         List<CarportItem> carportItem = carportItemFacade.calcPost();
         request.setAttribute("carportItems", carportItem);
 
-        CarportItem addCarportItem =  carportItemFacade.AddCarportItem(order_id, length, width, quantity, price, description);
+        CarportItem addCarportItem = carportItemFacade.AddCarportItem(order_id, length, width, quantity, price, description);
         request.setAttribute("addCarportItem", addCarportItem);
 
         return pageToShow;
-
     }
 
-    public String getRole()
-    {
+    public String getRole() {
         return role;
     }
 }

@@ -1,6 +1,5 @@
 package business.services;
 
-
 import business.entities.ConfirmedOrders;
 import business.exceptions.UserException;
 import business.persistence.ConfirmedOrdersMapper;
@@ -8,7 +7,6 @@ import business.persistence.Database;
 
 import java.sql.SQLException;
 import java.util.List;
-
 
 public class ConfirmedOrdersFacade {
 
@@ -20,6 +18,5 @@ public class ConfirmedOrdersFacade {
 
     public List<ConfirmedOrders> ListOfAllConfirmedOrders() throws UserException, SQLException {
         return confirmedOrdersMapper.ListOfAllConfirmedOrders();
-
     }
 }

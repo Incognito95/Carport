@@ -17,7 +17,6 @@ public class SVG
             "y=\"%d\" "+
         " preserveAspectRatio=\"xMinYMin\">";
 
-
     private final String rectTemplate = "<rect x=\"%d\" y=\"%d\" height=\"%d\" width=\"%d\" style=\"stroke:#000000; fill: #ffffff\"/>";
 
     private final String lineTemplate = "<line x1=\"%d\" y1=\"%d\" x2=\"%d\" y2=\"%d\" style=\"stroke:#000000;\"/>";
@@ -62,8 +61,7 @@ public class SVG
         svg.append(String.format(textlodretTemplate,x,y,text));
     }
 
-    public void addstippledeline(int x1, int y1, int x2, int y2)
-    {
+    public void addstippledeline(int x1, int y1, int x2, int y2) {
         svg.append(String.format(stippledelineTemplate,x1,y1,x2,y2));
     }
 
