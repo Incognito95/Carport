@@ -15,7 +15,7 @@
 
         <div class="d-flex justify-content-center mt-5">
             <br>
-            <a href="${pageContext.request.contextPath}/fc/seallproductpage" type="button" class="btn btn-primary btn-lg ms-5">Se alle varer</a>
+            <a href="${pageContext.request.contextPath}/fc/seeallproductspage" type="button" class="btn btn-primary btn-lg ms-5">Se alle varer</a>
         </div>
 
         <div class="d-flex justify-content-center mt-5">

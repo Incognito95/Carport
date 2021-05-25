@@ -120,7 +120,7 @@ CREATE TABLE `orders` (
   KEY `fk_order_order_status1_idx` (`my_status`),
   CONSTRAINT `fk_order_customer1` FOREIGN KEY (`customer_id`) REFERENCES `user` (`user_id`),
   CONSTRAINT `fk_order_order_status1` FOREIGN KEY (`my_status`) REFERENCES `order_status` (`status`)
-) ENGINE=InnoDB AUTO_INCREMENT=187 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=189 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,7 +129,7 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES (180,NULL,NULL,NULL,NULL,123,150,NULL,'flat'),(181,NULL,NULL,NULL,NULL,123,167,NULL,'flat'),(182,NULL,NULL,NULL,NULL,123,123,NULL,'flat'),(183,NULL,NULL,NULL,NULL,150,200,NULL,'rejsning'),(184,NULL,NULL,NULL,NULL,123,123,NULL,'rejsning'),(185,NULL,NULL,NULL,NULL,123,123,NULL,'rejsning'),(186,NULL,NULL,NULL,NULL,123,123,NULL,'rejsning');
+INSERT INTO `orders` VALUES (180,'2021-05-18 18:32:20',NULL,NULL,1,123,150,4000,'flat'),(187,NULL,NULL,NULL,NULL,123,123,NULL,'Vælg tag type'),(188,NULL,NULL,NULL,NULL,150,150,NULL,'rejsning');
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -173,8 +173,9 @@ CREATE TABLE `user` (
   `role` varchar(45) DEFAULT NULL,
   `postcode` varchar(10) DEFAULT NULL,
   `credit` int DEFAULT NULL,
+  `city` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -183,7 +184,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (3,NULL,NULL,NULL,'ermin','1234','customer',NULL,NULL),(4,NULL,NULL,NULL,'daniel','1234','employee',NULL,NULL),(5,NULL,NULL,NULL,'admin','123','admin',NULL,NULL);
+INSERT INTO `user` VALUES (1,'kontakt@cphbusiness.dk','Nørgaardsvej 30 2800, Kongens Lyngby ',36154504,'kontakt@cphbusiness.dk','1234','customer','123',1,'kbh'),(2,'kontakt@cphbusiness.dk','Nørgaardsvej 30 2800, Kongens Lyngby ',36154504,'kontakt@cphbusiness.dk','1234','employee',NULL,1,NULL),(3,'kontakt@cphbusiness.dk','Nørgaardsvej 30 2800, Kongens Lyngby ',36154504,'admin','123','admin',NULL,1,NULL),(4,'Daniel','Nørgaardsvej 30 2800, Kongens Lyngby ',36154504,'daniel','1234','employee',NULL,1,NULL),(6,'Daniel','Nørgaardsvej 30 2800, Kongens Lyngby ',36154504,'admin@admin.com','1234','customer',NULL,1,NULL),(7,'Daniel','Nørgaardsvej 30 2800, Kongens Lyngby ',36154504,NULL,'1',NULL,NULL,1,NULL),(8,'Daniel','Nørgaardsvej 30 2800, Kongens Lyngby ',36154504,NULL,'1',NULL,NULL,1,NULL),(9,'Daniel','Nørgaardsvej 30 2800, Kongens Lyngby ',36154504,'admin@admin.com','1',NULL,NULL,1,NULL),(10,'Daniel','Nørgaardsvej 30 2800, Kongens Lyngby ',36154504,NULL,NULL,NULL,NULL,1,NULL),(11,'daniel','Nørgaardsvej 30 2800, Kongens Lyngby ',36154504,'admin@admin.com','123',NULL,NULL,1,NULL),(12,'Daniel','Nørgaardsvej 30 2800, Kongens Lyngby ',36154504,NULL,NULL,NULL,NULL,1,NULL),(13,'Daniel','Nørgaardsvej 30 2800, Kongens Lyngby ',36154504,'kontakt@cphbusiness.dk','1234','customer',NULL,1,NULL),(14,'kontakt@cphbusiness.dk','Nørgaardsvej 30 2800, Kongens Lyngby ',36154504,'ermin','1234','customer',NULL,1,NULL),(16,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -196,4 +197,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-18 15:35:58
+-- Dump completed on 2021-05-25 16:16:03

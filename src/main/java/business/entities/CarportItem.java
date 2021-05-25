@@ -7,23 +7,34 @@ public class CarportItem {
     private int quantity;
     private int price;
     private String description;
+    private int width;
 
 
 
 
-    public CarportItem(int order_id, int itemId, int item_id, int length, int quantity, int price, String description) {
+
+    public CarportItem(int order_id, int item_id, int length, int width, int quantity, int price, String description) {
         this.order_id = order_id;
         this.item_id = item_id;
         this.length = length;
         this.quantity = quantity;
         this.price = price;
         this.description = description;
-
-    }
-
-    public CarportItem(int item_id) {
+        this.width = width;
         this.item_id = item_id;
     }
+
+    public CarportItem(int order_id, int length, int width, int quantity, int price, String description) {
+        this.order_id = order_id;
+        this.length = length;
+        this.quantity = quantity;
+        this.price = price;
+        this.description = description;
+        this.width = width;
+    }
+
+
+
 
     public int getOrder_id() {
         return order_id;
@@ -33,7 +44,7 @@ public class CarportItem {
         this.order_id = order_id;
     }
 
-    public int getItem_id(int i) {
+    public int getItem_id() {
         return item_id;
     }
 
@@ -71,5 +82,13 @@ public class CarportItem {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
     }
 }
