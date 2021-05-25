@@ -25,6 +25,14 @@ public class CalcCarportMapper {
 
     }
 
+    // stolper
+    // rem
+    // tag
+    // uden skur
+    // calculated carport items goes into carport_item table
+    // put calculations in a list
+
+
     //Overskrift "Udregnng af stolper"
     public List<CarportItem> calcPost() throws UserException {
         List<CarportItem> carportItems = new ArrayList<>();
