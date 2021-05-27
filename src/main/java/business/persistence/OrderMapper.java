@@ -1,6 +1,7 @@
 package business.persistence;
 
 import business.entities.Order;
+import business.entities.User;
 import business.exceptions.UserException;
 import business.services.OrderFacade;
 
@@ -17,21 +18,29 @@ public class OrderMapper
     }
 
     public Order createOrder(Order order) throws UserException {
-
+        
         try (Connection connection = database.connect())
         {
-            String sql = "INSERT INTO orders SET width = ?, length = ?, roof_type = ?";
+            String sql = "INSERT INTO orders SET width = ?, length = ?, roof_type = ?, customer_id = ?";
 
             try (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS))
             {
                 ps.setInt(1, order.getLength());
                 ps.setInt(2, order.getWidth());
                 ps.setString(3, order.getRoof_type());
+                ps.setInt(4, order.getCustomer_id());
+
                 ps.executeUpdate();
-                ResultSet ids = ps.getGeneratedKeys();
-                ids.next();
-                int id = ids.getInt(1);
-                order.setOrder_id(id);
+                ResultSet userIds = ps.getGeneratedKeys();
+                userIds.next();
+                int userIdsInt = userIds.getInt(1);
+                order.setCustomer_id(userIdsInt);
+
+                ps.executeUpdate();
+                ResultSet orderIds = ps.getGeneratedKeys();
+                orderIds.next();
+                int orderIdsInt = orderIds.getInt(1);
+                order.setOrder_id(orderIdsInt);
             }
             catch (SQLException ex)
             {
@@ -50,6 +59,7 @@ public class OrderMapper
         try (Connection connection = database.connect())
         {
             String sql = "SELECT * FROM orders INNER JOIN user WHERE customer_id = user_id";
+            User user = null;
 
             try (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS))
             {
