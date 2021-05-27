@@ -38,4 +38,34 @@ public class MaterialMapper {
             }
         }
     }
+
+
+    public Material createMaterial(Material material) throws UserException {
+        try (Connection connection = database.connect())
+        {
+            String sql = "INSERT INTO material SET length = ?, price_per_unit = ?, name = ?, unit = ?";
+
+            try (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS))
+            {
+                ps.setInt(1, material.getLength());
+                ps.setInt(2, material.getPrice_per_unit());
+                ps.setString(3, material.getName());
+                ps.setString(4, material.getUnit());
+                ps.executeUpdate();
+                ResultSet ids = ps.getGeneratedKeys();
+                ids.next();
+                int id = ids.getInt(1);
+                material.setId(id);
+            }
+            catch (SQLException ex)
+            {
+                throw new UserException(ex.getMessage());
+            }
+        }
+        catch (SQLException | UserException ex)
+        {
+            throw new UserException(ex.getMessage());
+        }
+        return material;
+    }
 }
