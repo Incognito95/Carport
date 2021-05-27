@@ -64,7 +64,6 @@ public class OrderMapper
                     String roof_type = rs.getString("roof_type");
                     orders.add(new Order(customer_id, length, width, date, sub_total, roof_type, order_id));
                 }
-                return orders;
             }
             catch (SQLException ex)
             {
@@ -75,5 +74,6 @@ public class OrderMapper
         {
             throw new UserException(ex.getMessage());
         }
+        return orders;
     }
 }
