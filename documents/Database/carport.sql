@@ -184,7 +184,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'customer','Nørgaardsvej 30',112112112,'customer','1234','customer','2800',1,'lyngby'),(2,'employee','Skolevej 1',911911911,'employee','1234','employee','2000',1,'frb'),(3,'admin','Stationsvej 2',1010101,'admin','1234','admin','2200',1,'kbh n'),(24,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(25,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(26,'admin','lyngby',123456,'admin@admin.com','1234',NULL,NULL,NULL,NULL),(27,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(28,NULL,NULL,NULL,'test','1234','customer',NULL,NULL,NULL),(29,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(30,'test','test',1234,'hej','1234',NULL,NULL,NULL,NULL);
+INSERT INTO `user` VALUES (1,'customer','Nørgaardsvej 30',112112112,'customer','1234','customer','2800',1,'lyngby'),(2,'employee','Skolevej 1',911911911,'employee','1234','employee','2000',1,'frb'),(3,'admin','Stationsvej 2',1010101,'admin','1234','admin','2200',1,'kbh n');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -197,4 +197,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-27 23:38:10
+-- Dump completed on 2021-05-28  0:16:39
