@@ -18,12 +18,12 @@
         <table class="table mt-5">
             <thead>
             <tr>
-                <th scope="col">Order ID</th>
-                <th scope="col">length</th>
-                <th scope="col">width</th>
-                <th scope="col">Type</th>
-                <th>See Pieces List</th>
-                <th>See drawing</th>
+                <th scope="col">Ordre ID</th>
+                <th scope="col">Længde</th>
+                <th scope="col">Bredde</th>
+                <th scope="col">Tag Type</th>
+                <th>Se Stykliste</th>
+                <th>Se tegning</th>
             </tr>
             </thead>
             <tbody>

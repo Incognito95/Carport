@@ -22,6 +22,12 @@
                 ${requestScope.drawing}
 
 
+            <div class="d-flex justify-content-center mt-5">
+                <br>
+                <a href="seallcustomersrequests" type="button" class="btn btn-danger btn-lg ms-5">Go back</a>
+            </div>
+
+
 
 
              <c:if test="${sessionScope.role == 'customer' }">
