@@ -19,11 +19,6 @@
 
         <br><a href="${pageContext.request.contextPath}/fc/customerviewrequestspage" class="btn btn-secondary mt-5">Se dine forespørgsler</a>
 
-        <br><a href="${pageContext.request.contextPath}/fc/customervieworderspage" class="btn btn-secondary mt-5">Se dine ordrer</a>
-
-
-        <br><a href="${pageContext.request.contextPath}/fc/orderconfirmationpage" class="btn btn-secondary mt-5">Se dine ordrer bekræftelser</a>
-
 
 
     </jsp:body>

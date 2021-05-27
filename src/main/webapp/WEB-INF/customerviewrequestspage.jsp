@@ -26,6 +26,7 @@
                 <th scope="col">Tag</th>
                 <th scope="col">Navn</th>
                 <th scope="col">Status</th>
+                <th>Betal</th>
             </tr>
             </thead>
             <tbody>

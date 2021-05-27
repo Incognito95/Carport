@@ -1,6 +1,7 @@
 package web.commands;
 
 import business.exceptions.UserException;
+import business.persistence.AddNewProductMapper;
 import business.persistence.Database;
 
 import java.sql.SQLException;
@@ -37,7 +38,7 @@ public abstract class Command {
         commands.put("createoffer", new CommandProtectedPage("createoffer", "employee"));
         commands.put("requestpage", new CommandProtectedPage("requestpage", "customer"));
         commands.put("adminpage", new CommandProtectedPage("adminpage", "admin"));
-        commands.put("addnewproductpage", new CommandProtectedPage("addnewproductpage", "admin"));
+        commands.put("addnewproductpage", new AddNewProductCommand("addnewproductpage", "admin"));
         commands.put("addnewsellerpage", new AddNewSellerCommand("addnewsellerpage", "admin"));
         commands.put("customerviewrequestspage", new ViewCustomerRequestsCommand("customerviewrequestspage", "customer"));
         commands.put("confirmpaymentpage", new ConfirmPaymentCommand("confirmpaymentpage", "customer"));

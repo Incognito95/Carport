@@ -18,21 +18,21 @@
         <table class="table mt-5">
             <thead>
             <tr>
-                <th scope="col">Bredde</th>
+                <th scope="col">ID</th>
                 <th scope="col">Længde</th>
-                <th scope="col">Tag</th>
-                <th scope="col">Navn</th>
-                <th scope="col">Status</th>
+                <th scope="col">Price Per Unit</th>
+                <th scope="col">Name</th>
+                <th scope="col">Unit</th>
             </tr>
             </thead>
             <tbody>
-            <c:forEach var="seeProducts" items="${requestScope.seeProducts}">
+            <c:forEach var="materials" items="${requestScope.materials}">
             <tr>
-                <td>${seeProducts.length}</td>
-                <td>${seeProducts.width}</td>
-                <td>${seeProducts.roof_type}</td>
-                <td>${seeProducts.name}</td>
-                <td>${seeProducts.status}</td>
+                <td>${materials.id}</td>
+                <td>${materials.price_per_unit}</td>
+                <td>${materials.length}</td>
+                <td>${materials.name}</td>
+                <td>${materials.unit}</td>
             </tr>
             </c:forEach>
             </tbody>

@@ -7,53 +7,30 @@
 
 <t:genericpage>
     <jsp:attribute name="header">
-         Send forespørgelse
+         Add New Product
     </jsp:attribute>
     <jsp:attribute name="footer">
     </jsp:attribute>
 
     <jsp:body>
 
+        <form action="${pageContext.request.contextPath}/fc/addnewproductpage" method="post">
 
-        <form action="${pageContext.request.contextPath}/fc/" method="post">
         <div class="container mt-2">
-
-            <label class="mt-2">ID</label>
-            <input type="text" name="width" class="form-control mt-2">
-
             <label class="mt-2">Længde</label>
             <input type="text" name="length" class="form-control mt-2">
 
-            <label class="mt-2">Bredde</label>
-            <input type="text" name="roof_type" class="form-control mt-2">
+            <label class="mt-2">Price Per Unit</label>
+            <input type="text" name="price_per_unit" class="form-control mt-2">
 
-
-            <label class="mt-2">Dybde</label>
-            <input type="text" name="toolroom_width" class="form-control mt-2">
-
-            <label class="mt-2">Navn</label>
-            <input type="text" name="toolroom_length" class="form-control mt-2">
-
-            <label class="mt-5">Beskrivelse</label>
+            <label class="mt-2">Name</label>
             <input type="text" name="name" class="form-control mt-2">
-
-            <label class="mt-2">Pris</label>
-            <input type="text" name="address" class="form-control mt-2">
-
-            <label class="mt-2">Enhed</label>
-            <input type="text" name="postcode" class="form-control mt-2">
-
-
 
 
                 <a href="adminpage" type="button" class="mt-3 btn btn-danger float-left">Go back</a>
 
                 <button type="submit" class="mt-3 btn btn-success float-end">Tilføj</button>
-
-
-
-
-        </div>
+            </div>
 
         </form>
 

@@ -15,7 +15,7 @@ public class OrderFacade {
         this.orderMapper = new OrderMapper(database);
     }
 
-    public Order createOrder(int customer_id, int length, int width, long date, int subtotal, String roof_type) throws UserException {
+    public Order createOrder(int customer_id, int length, int width, String date, int subtotal, String roof_type) throws UserException {
         Order order = new Order(customer_id, length, width, date, subtotal, roof_type);
         order = orderMapper.createOrder(order);
         return order;

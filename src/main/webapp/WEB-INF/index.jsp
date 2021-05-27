@@ -22,7 +22,6 @@
                 Her kan du vælge mellem, at logge ind eller forsætte til skræddersyning af carporte.
             </div>
 
-            <br><a href="${pageContext.request.contextPath}/fc/requestpage" class="btn btn-primary mt-3">Lav en forespørgelse</a>
 
             <c:if test="${sessionScope.role == 'employee' }">
                 <p style="font-size: larger">Her er hvad du kan gøre, fordi du er logget ind, som sælger./Du er logget ind som: 'Sælger'.

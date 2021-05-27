@@ -25,7 +25,7 @@ public class CreateNewOrderCommand extends CommandProtectedPage
         HttpSession session = request.getSession();
 
         User u1 = (User) session.getAttribute("user");
-        long date = System.currentTimeMillis();
+        String date = request.getParameter("date");
         int width = Integer.parseInt(request.getParameter("width"));
         int length = Integer.parseInt(request.getParameter("length"));
         String roof_type = request.getParameter("roof_type");
