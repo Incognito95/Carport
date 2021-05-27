@@ -49,7 +49,7 @@ public class OrderMapper
 
         try (Connection connection = database.connect())
         {
-            String sql = "SELECT * FROM orders";
+            String sql = "SELECT * FROM orders INNER JOIN user WHERE customer_id = user_id";
 
             try (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS))
             {
@@ -59,7 +59,7 @@ public class OrderMapper
                     int order_id = rs.getInt("order_id");
                     int length = rs.getInt("length");
                     int width = rs.getInt("width");
-                    long date = rs.getInt("date");
+                    String date = rs.getString("date");
                     int sub_total = rs.getInt("subtotal");
                     String roof_type = rs.getString("roof_type");
                     orders.add(new Order(customer_id, length, width, date, sub_total, roof_type, order_id));

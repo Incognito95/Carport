@@ -34,7 +34,7 @@ public class CalcCarportMapper {
         List<CarportItem> carportItems = new ArrayList<>();
 
         //1. Hent Part via id (henter id_nr 10 = stolpe)
-        Material material = materialFacade.getCarportItemById(10);
+       // Material material = materialFacade.getCarportItemById(10);
 
         //2. Ud fra kundens forespørgsel i orders(780 - 120cm = 660)
         // ( 660 / 310 = 2,12 --> 3 stolper. 3 x 2 = 6(qty).

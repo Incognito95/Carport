@@ -17,18 +17,18 @@ public class ShowAllProductsMapper {
         List<SeeProducts> seeProducts = new ArrayList<>();
 
         try (Connection connection = database.connect()) {
-            String sql = "SELECT * FROM user INNER JOIN orders";
+            String sql = "SELECT * FROM material";
 
             try (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
                 ResultSet rs = ps.executeQuery();
 
                 while (rs.next()) {
+                    int id = rs.getInt("id");
                     int length = rs.getInt("length");
-                    int width = rs.getInt("width");
-                    String roof_type = rs.getString("roof_type");
-                    String name = rs.getString("email");
-                    String status = rs.getString("roof_type");
-                    seeProducts.add(new SeeProducts(width, length, roof_type, name, status));
+                    int width = rs.getInt("price_per_unit");
+                    String name = rs.getString("name");
+                    String unit = rs.getString("unit");
+                    seeProducts.add(new SeeProducts(id, width, length, name, unit));
                 }
                 return seeProducts;
             } catch (SQLException ex) {

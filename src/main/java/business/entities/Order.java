@@ -7,12 +7,12 @@ public class Order {
     private int customer_id;
     private int length;
     private int width;
-    private long date;
+    private String date;
     private int subtotal;
     private String roof_type;
     private int order_id;
 
-    public Order(int customer_id, int length, int width, long date, int subtotal, String roof_type, int order_id) {
+    public Order(int customer_id, int length, int width, String date, int subtotal, String roof_type, int order_id) {
         this.customer_id = customer_id;
         this.length = length;
         this.width = width;
@@ -22,14 +22,14 @@ public class Order {
         this.order_id = order_id;
     }
 
-    public Order(int customer_id, int length, int width, long date, int subtotal, String roof_type) {
+    public Order(int customer_id, int length, int width, String date, int subtotal, String roof_type) {
         this.customer_id = customer_id;
         this.length = length;
         this.width = width;
         this.roof_type = roof_type;
     }
 
-    public Order(int order_id, long date, int length, int width, int price, String roof_type) {
+    public Order(int order_id, String date, int length, int width, int price, String roof_type) {
         this.order_id = order_id;
         this.date = date;
         this.length = length;
@@ -62,11 +62,11 @@ public class Order {
         this.width = width;
     }
 
-    public long getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(long date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

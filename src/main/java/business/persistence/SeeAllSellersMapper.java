@@ -19,7 +19,7 @@ public class SeeAllSellersMapper
 
         try (Connection connection = database.connect())
         {
-            String sql = "SELECT * FROM user";
+            String sql = "SELECT * FROM user WHERE role =\"employee\"";
 
             try (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS))
             {

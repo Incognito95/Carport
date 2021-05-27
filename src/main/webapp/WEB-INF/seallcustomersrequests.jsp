@@ -28,14 +28,14 @@
             </thead>
             <tbody>
             <c:forEach var="orders" items="${requestScope.orders}">
-            <tr>
-                <td>${orders.order_id}</td>
-                <td>${orders.length}</td>
-                <td>${orders.width}</td>
-                <td>${orders.roof_type}</td>
-                <td><a href="${pageContext.request.contextPath}/fc/seeonepieceslistpage" class="btn btn-primary">Se stykliste</a></td>
-                <td><a href="${pageContext.request.contextPath}/fc/showsvg" type="button" class="btn btn-primary">Se tegning</a></td>
-            </tr>
+                <tr>
+                    <td>${orders.order_id}</td>
+                    <td>${orders.length}</td>
+                    <td>${orders.width}</td>
+                    <td>${orders.roof_type}</td>
+                    <td><a href="${pageContext.request.contextPath}/fc/seeonepieceslistpage" class="btn btn-primary">Se stykliste</a></td>
+                    <td><a href="${pageContext.request.contextPath}/fc/showsvg" type="button" class="btn btn-primary">Se tegning</a></td>
+                </tr>
             </c:forEach>
             </tbody>
         </table>

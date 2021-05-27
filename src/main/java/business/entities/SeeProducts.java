@@ -1,35 +1,26 @@
 package business.entities;
 
 public class SeeProducts {
-    private int order_id;
-    private int width;
+    private int id;
     private int length;
-    private String roof_type;
+    private int price_per_unit;
     private String name;
-    private String status;
+    private String unit;
 
-    public SeeProducts(int width, int length, String roof_type, String name, String status) {
-        this.width = width;
+    public SeeProducts(int id, int length, int price_per_unit, String name, String unit) {
+        this.id = id;
         this.length = length;
-        this.roof_type = roof_type;
+        this.price_per_unit = price_per_unit;
         this.name = name;
-        this.status = status;
+        this.unit = unit;
     }
 
-    public int getOrder_id() {
-        return order_id;
+    public int getId() {
+        return id;
     }
 
-    public void setOrder_id(int order_id) {
-        this.order_id = order_id;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public void setWidth(int width) {
-        this.width = width;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getLength() {
@@ -40,12 +31,12 @@ public class SeeProducts {
         this.length = length;
     }
 
-    public String getRoof_type() {
-        return roof_type;
+    public int getPrice_per_unit() {
+        return price_per_unit;
     }
 
-    public void setRoof_type(String roof_type) {
-        this.roof_type = roof_type;
+    public void setPrice_per_unit(int price_per_unit) {
+        this.price_per_unit = price_per_unit;
     }
 
     public String getName() {
@@ -56,11 +47,11 @@ public class SeeProducts {
         this.name = name;
     }
 
-    public String getStatus() {
-        return status;
+    public String getUnit() {
+        return unit;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
 }

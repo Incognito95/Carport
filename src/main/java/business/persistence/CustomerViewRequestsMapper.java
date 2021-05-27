@@ -21,19 +21,19 @@ public class CustomerViewRequestsMapper {
         List<Requests> carportItems = new ArrayList<>();
 
         try (Connection connection = database.connect()) {
-            String sql = "SELECT * FROM orders INNER JOIN order_status, user";
+            String sql = "SELECT * FROM orders";
 
             try (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
                 ResultSet rs = ps.executeQuery();
 
                 while (rs.next()) {
                     int order_id = rs.getInt("order_id");
-                    int width = rs.getInt("width");
+                    int date = rs.getInt("date");
+                    int customer_id = rs.getInt("customer_id");
                     int length = rs.getInt("length");
+                    int width = rs.getInt("width");
                     String roof_type = rs.getString("roof_type");
-                    String name = rs.getString("email");
-                    String status = rs.getString("status");
-                    carportItems.add(new Requests(order_id, width, length, roof_type, name, status));
+                    carportItems.add(new Requests(order_id, date, customer_id, length, width, roof_type));
                 }
                 return carportItems;
             } catch (SQLException ex) {
