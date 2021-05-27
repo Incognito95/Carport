@@ -36,7 +36,6 @@ public class OrderMapper
                 int userIdsInt = userIds.getInt(1);
                 order.setCustomer_id(userIdsInt);
 
-                ps.executeUpdate();
                 ResultSet orderIds = ps.getGeneratedKeys();
                 orderIds.next();
                 int orderIdsInt = orderIds.getInt(1);

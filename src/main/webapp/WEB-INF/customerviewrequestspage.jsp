@@ -2,7 +2,7 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<t:genericpage>
+<t:genericpage >
     <jsp:attribute name="header">
          Customer View Request
     </jsp:attribute>
@@ -29,7 +29,7 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach var="requests" items="${requestScope.requests}">
+            <c:forEach var="requests" items="${requestScope.requests}" >
                 <tr>
                     <td>${requests.order_id}</td>
                     <td>${requests.date}</td>
