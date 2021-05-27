@@ -39,7 +39,7 @@
         </table>
         <div class="d-flex justify-content-center mt-5">
             <br>
-            <a href="employeepage" type="button" class="btn btn-danger btn-lg ms-5">Go back</a>
+            <a href="adminpage" type="button" class="btn btn-danger btn-lg ms-5">Go back</a>
         </div>
 
 

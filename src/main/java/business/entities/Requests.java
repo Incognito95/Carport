@@ -2,20 +2,21 @@ package business.entities;
 
 public class Requests {
     private int order_id;
-    private int width;
+    private int date;
+    private int customer_id;
     private int length;
+    private int width;
     private String roof_type;
-    private String name;
-    private String status;
 
-    public Requests(int order_id, int width, int length, String roof_type, String name, String status) {
+    public Requests(int order_id, int date, int customer_id, int length, int width, String roof_type) {
         this.order_id = order_id;
-        this.width = width;
+        this.date = date;
+        this.customer_id = customer_id;
         this.length = length;
+        this.width = width;
         this.roof_type = roof_type;
-        this.name = name;
-        this.status = status;
     }
+
 
     public int getOrder_id() {
         return order_id;
@@ -25,12 +26,20 @@ public class Requests {
         this.order_id = order_id;
     }
 
-    public int getWidth() {
-        return width;
+    public int getDate() {
+        return date;
     }
 
-    public void setWidth(int width) {
-        this.width = width;
+    public void setDate(int date) {
+        this.date = date;
+    }
+
+    public int getCustomer_id() {
+        return customer_id;
+    }
+
+    public void setCustomer_id(int customer_id) {
+        this.customer_id = customer_id;
     }
 
     public int getLength() {
@@ -41,27 +50,19 @@ public class Requests {
         this.length = length;
     }
 
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
     public String getRoof_type() {
         return roof_type;
     }
 
     public void setRoof_type(String roof_type) {
         this.roof_type = roof_type;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 }

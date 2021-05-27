@@ -17,7 +17,7 @@
 
         <br><a href="${pageContext.request.contextPath}/fc/requestpage" class="btn btn-primary mt-5">Lav en forespørgelse</a>
 
-        <br><a href="${pageContext.request.contextPath}/fc/customerviewrequestspage" class="btn btn-secondary mt-5">Se dine forespørgsler</a>
+        <br><a href="${pageContext.request.contextPath}/fc/customerviewrequestspage" class="btn btn-primary mt-5">Se dine forespørgsler</a>
 
 
 
