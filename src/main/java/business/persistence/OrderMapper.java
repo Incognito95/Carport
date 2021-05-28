@@ -40,6 +40,7 @@ public class OrderMapper
                 orderIds.next();
                 int orderIdsInt = orderIds.getInt(1);
                 order.setOrder_id(orderIdsInt);
+
             }
             catch (SQLException ex)
             {
@@ -57,7 +58,7 @@ public class OrderMapper
 
         try (Connection connection = database.connect())
         {
-            String sql = "SELECT * FROM orders INNER JOIN user WHERE customer_id = user_id";
+            String sql = "SELECT * FROM orders WHERE customer_id BETWEEN ? AND ?";
             User user = null;
 
             try (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS))

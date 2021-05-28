@@ -1,11 +1,16 @@
 package business.entities;
 
+import java.util.regex.Matcher;
+
 public class Material {
     private int id;
     private int length;
     private int price_per_unit;
     private String name;
     private String unit;
+    private String email;
+    private String password;
+    private String role;
 
 
     public Material(int id, int length, int price_per_unit, String name, String unit) {
@@ -22,6 +27,7 @@ public class Material {
         this.name = name;
         this.unit = unit;
     }
+
 
     public int getId() {
         return id;

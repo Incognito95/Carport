@@ -16,6 +16,10 @@
 
         <h2 class="mt-5">Forespørgelser</h2>
 
+
+
+
+
         <table class="table mt-5">
             <thead>
             <tr>
@@ -31,6 +35,7 @@
             <tbody>
             <c:forEach var="requests" items="${requestScope.requests}" >
                 <tr>
+                    <c:if test="${requests.customer_id == sessionScope.user.id}">
                     <td>${requests.order_id}</td>
                     <td>${requests.date}</td>
                     <td>${requests.customer_id}</td>
@@ -45,6 +50,7 @@
                             <a href="${requests.order_id}">Betal</a>
                         </form>
                     </td>
+                    </c:if>
                 </tr>
             </c:forEach>
             </tbody>
@@ -59,3 +65,9 @@
     </jsp:body>
 </t:genericpage>
 
+
+<%--                    <c:choose>--%>
+<%--                        <c:when test="${requests.customer_id == sessionScope.user.id}">--%>
+<%--                            ${requests.customer_id}--%>
+<%--                        </c:when>--%>
+<%--                    </c:choose>--%>
