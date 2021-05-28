@@ -3,16 +3,27 @@ package business.entities;
 public class AddSeller {
     private String name;
     private String address;
-    private String phone;
+    private int phone;
     private String email;
     private String password;
+    private String role;
 
-    public AddSeller(String name, String address, String phone, String email, String password) {
+    public AddSeller(String name, String address, int phone, String email, String password, String role) {
         this.name = name;
         this.address = address;
         this.phone = phone;
         this.email = email;
         this.password = password;
+        this.role = role;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public String setRole(String role) {
+        this.role = role;
+        return role;
     }
 
     public String getName() {
@@ -31,11 +42,11 @@ public class AddSeller {
         this.address = address;
     }
 
-    public String getPhone() {
+    public int getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public void setPhone(int phone) {
         this.phone = phone;
     }
 
@@ -54,4 +65,5 @@ public class AddSeller {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }
