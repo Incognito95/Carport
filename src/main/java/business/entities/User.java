@@ -45,22 +45,22 @@ public class User
     }
 
 
-    public User(int date, int length, int width, int price, String roof_type) {
-        this.date = date;
-        this.length = length;
-        this.width = width;
-        this.price = price;
-        this.roof_type = roof_type;
-    }
-
-    public User(int orderid, int date, int length, int width, int price, String roof_type) {
-        this.orderId = orderid;
-        this.date = date;
-        this.length = length;
-        this.width = width;
-        this.price = price;
-        this.roof_type = roof_type;
-    }
+//    public User(int date, int length, int width, int price, String roof_type) {
+//        this.date = date;
+//        this.length = length;
+//        this.width = width;
+//        this.price = price;
+//        this.roof_type = roof_type;
+//    }
+//
+//    public User(int orderid, int date, int length, int width, int price, String roof_type) {
+//        this.orderId = orderid;
+//        this.date = date;
+//        this.length = length;
+//        this.width = width;
+//        this.price = price;
+//        this.roof_type = roof_type;
+//    }
 
     @Override
     public String toString() {

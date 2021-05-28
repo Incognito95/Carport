@@ -14,8 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
-public class AddNewProductCommand extends CommandProtectedPage
-{
+public class AddNewProductCommand extends CommandProtectedPage {
     private MaterialFacade materialFacade = new MaterialFacade(database);
 
     public AddNewProductCommand(String pageToShow, String role) {
@@ -23,12 +22,8 @@ public class AddNewProductCommand extends CommandProtectedPage
     }
 
     @Override
-    public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException
-    {
+    public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException {
         HttpSession session = request.getSession();
-
-
-
 
         if (request.getParameter("length") != null) {
             int length = Integer.parseInt(request.getParameter("length"));
