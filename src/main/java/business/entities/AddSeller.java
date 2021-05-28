@@ -6,13 +6,24 @@ public class AddSeller {
     private int phone;
     private String email;
     private String password;
+    private String role;
 
-    public AddSeller(String name, String address, int phone, String email, String password) {
+    public AddSeller(String name, String address, int phone, String email, String password, String role) {
         this.name = name;
         this.address = address;
         this.phone = phone;
         this.email = email;
         this.password = password;
+        this.role = role;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public String setRole(String role) {
+        this.role = role;
+        return role;
     }
 
     public String getName() {
@@ -54,4 +65,5 @@ public class AddSeller {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }

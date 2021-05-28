@@ -17,7 +17,7 @@ public class AddNewSellerMapper {
     public AddSeller AddNewSeller(AddSeller seller) throws UserException {
 
         try (Connection connection = database.connect()) {
-            String sql = "INSERT INTO user SET name = ?, address = ?, phone = ?, email = ?, password = ?";
+            String sql = "INSERT INTO user SET name = ?, address = ?, phone = ?, email = ?, password = ?, role = ?";
 
             try (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
                 ps.setString(1, seller.getName());
@@ -25,6 +25,7 @@ public class AddNewSellerMapper {
                 ps.setInt(3, seller.getPhone());
                 ps.setString(4, seller.getEmail());
                 ps.setString(5, seller.getPassword());
+                ps.setString(6,seller.setRole("employee"));
                 ps.executeUpdate();
                 ResultSet ids = ps.getGeneratedKeys();
                 ids.next();

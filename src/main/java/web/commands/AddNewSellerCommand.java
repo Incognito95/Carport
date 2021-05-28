@@ -24,14 +24,15 @@ public class AddNewSellerCommand extends CommandProtectedPage {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException {
         HttpSession session = request.getSession();
 
-        if (request.getParameter("length") != null) {
+        if (request.getParameter("email") != null) {
             String name = request.getParameter("name");
             String address = request.getParameter("address");
             int phone = Integer.parseInt(request.getParameter("phone"));
             String email = request.getParameter("email");
             String password = request.getParameter("password");
-            AddSeller addSeller = addNewSellerFacade.AddNewSeller(name, address, phone, email, password);
-            request.setAttribute("addseller", addSeller);
+            String role = request.getParameter("role");
+            AddSeller addSeller = addNewSellerFacade.AddNewSeller(name, address, phone, email, password, role);
+            request.setAttribute("addSeller", addSeller);
         }
 
         return pageToShow;
