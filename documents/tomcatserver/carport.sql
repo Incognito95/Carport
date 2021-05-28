@@ -63,6 +63,7 @@ CREATE TABLE `material` (
   KEY `fk_material_unit1_idx` (`unit`),
   CONSTRAINT `fk_material_unit1` FOREIGN KEY (`unit`) REFERENCES `unit` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=168 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=165 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,6 +73,7 @@ CREATE TABLE `material` (
 LOCK TABLES `material` WRITE;
 /*!40000 ALTER TABLE `material` DISABLE KEYS */;
 INSERT INTO `material` VALUES (1,360,4,'25x200	mm.	trykimp.	Brædt','stk'),(2,540,4,'25x200	mm.	trykimp.	Brædt','stk'),(3,360,2,'25x125mm.	trykimp.	Brædt','stk'),(4,540,4,'25x125mm.	trykimp.	Brædt','stk'),(5,420,1,'38x73	mm.	Lægte	ubh.','stk'),(6,270,12,'45x95	mm.	Reglar	ub.','stk'),(7,240,4,'45x95	mm.	Reglar	ub.','stk'),(8,600,2,'45x195	mm.	spærtræ	ubh.','stk'),(9,480,1,'45x195	mm.	spærtræ	ubh.','stk'),(10,600,15,'97x97	mm.	trykimp.	Stolpe','stk'),(11,300,11,'19x100	mm.	trykimp.	Brædt		','stk'),(12,210,200,'19x100	mm.	trykimp.	Brædt		','stk'),(13,540,4,'19x100	mm.	trykimp.	Brædt		','stk'),(14,360,6,'Plastmo	Ecolite	blåtonet','stk'),(15,600,6,'Plastmo	Ecolite	blåtonet','stk'),(16,360,3,'plastmo	bundskruer	200	stk.','pakke'),(17,300,2,'hulbånd	1x20	mm.	10	mtr','rulle'),(18,NULL,15,'universal	190	mm	højre','stk'),(19,NULL,15,'universal	190	mm	venstre','stk'),(20,NULL,1,'4,5	x	60	mm.	skruer	200	stk.','pakke'),(21,NULL,3,'4,0	x	50	mm.	beslagskruer	250	\nstk.','pakke'),(22,NULL,18,'bræddebolt	10	x	120	mm.','stk'),(23,NULL,12,'firkantskiver	40x40x11mm','stk'),(24,NULL,2,'4,5	x	70	mm.	Skruer	400	stk.','pk.'),(25,NULL,2,'4,5	x	50	mm.	Skruer	300	stk.','pk.'),(26,NULL,1,'stalddørsgreb	50x75','sæt'),(27,NULL,2,'t	hængsel	390	mm','stk'),(28,NULL,32,'vinkelbeslag	35','stk'),(164,50,100,'test',NULL),(165,360,4,'25x200	mm.	trykimp.	Brædt','stk'),(166,360,4,'25x200	mm.	trykimp.	Brædt','stk'),(167,360,4,'25x200	mm.	trykimp.	Brædt','stk');
+INSERT INTO `material` VALUES (1,360,4,'25x200	mm.	trykimp.	Brædt','stk'),(2,540,4,'25x200	mm.	trykimp.	Brædt','stk'),(3,360,2,'25x125mm.	trykimp.	Brædt','stk'),(4,540,4,'25x125mm.	trykimp.	Brædt','stk'),(5,420,1,'38x73	mm.	Lægte	ubh.','stk'),(6,270,12,'45x95	mm.	Reglar	ub.','stk'),(7,240,4,'45x95	mm.	Reglar	ub.','stk'),(8,600,2,'45x195	mm.	spærtræ	ubh.','stk'),(9,480,1,'45x195	mm.	spærtræ	ubh.','stk'),(10,600,15,'97x97	mm.	trykimp.	Stolpe','stk'),(11,300,11,'19x100	mm.	trykimp.	Brædt		','stk'),(12,210,200,'19x100	mm.	trykimp.	Brædt		','stk'),(13,540,4,'19x100	mm.	trykimp.	Brædt		','stk'),(14,360,6,'Plastmo	Ecolite	blåtonet','stk'),(15,600,6,'Plastmo	Ecolite	blåtonet','stk'),(16,360,3,'plastmo	bundskruer	200	stk.','pakke'),(17,300,2,'hulbånd	1x20	mm.	10	mtr','rulle'),(18,NULL,15,'universal	190	mm	højre','stk'),(19,NULL,15,'universal	190	mm	venstre','stk'),(20,NULL,1,'4,5	x	60	mm.	skruer	200	stk.','pakke'),(21,NULL,3,'4,0	x	50	mm.	beslagskruer	250	\nstk.','pakke'),(22,NULL,18,'bræddebolt	10	x	120	mm.','stk'),(23,NULL,12,'firkantskiver	40x40x11mm','stk'),(24,NULL,2,'4,5	x	70	mm.	Skruer	400	stk.','pk.'),(25,NULL,2,'4,5	x	50	mm.	Skruer	300	stk.','pk.'),(26,NULL,1,'stalddørsgreb	50x75','sæt'),(27,NULL,2,'t	hængsel	390	mm','stk'),(28,NULL,32,'vinkelbeslag	35','stk'),(164,50,100,'test',NULL);
 /*!40000 ALTER TABLE `material` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -121,6 +123,7 @@ CREATE TABLE `orders` (
   CONSTRAINT `fk_order_customer1` FOREIGN KEY (`customer_id`) REFERENCES `user` (`user_id`),
   CONSTRAINT `fk_order_order_status1` FOREIGN KEY (`my_status`) REFERENCES `order_status` (`status`)
 ) ENGINE=InnoDB AUTO_INCREMENT=200 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=198 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -130,6 +133,7 @@ CREATE TABLE `orders` (
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
 INSERT INTO `orders` VALUES (1,NULL,NULL,NULL,1,150,150,NULL,'flat'),(197,NULL,NULL,NULL,2,100,100,NULL,'rejsning'),(198,NULL,NULL,NULL,1,111,111,NULL,'rejsning'),(199,NULL,NULL,NULL,31,10,10,NULL,'flat');
+INSERT INTO `orders` VALUES (1,NULL,NULL,NULL,1,150,150,NULL,'flat'),(197,NULL,NULL,NULL,2,100,100,NULL,'rejsning');
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -176,6 +180,7 @@ CREATE TABLE `user` (
   `city` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -185,6 +190,7 @@ CREATE TABLE `user` (
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 INSERT INTO `user` VALUES (1,'customer','Nørgaardsvej 30',112112112,'customer','1234','customer','2800',1,'lyngby'),(2,'employee','Skolevej 1',911911911,'employee','1234','employee','2000',1,'frb'),(3,'admin','Stationsvej 2',1010101,'admin','1234','admin','2200',1,'kbh n'),(31,NULL,NULL,NULL,'test','1234','customer',NULL,NULL,NULL);
+INSERT INTO `user` VALUES (1,'customer','Nørgaardsvej 30',112112112,'customer','1234','customer','2800',1,'lyngby'),(2,'employee','Skolevej 1',911911911,'employee','1234','employee','2000',1,'frb'),(3,'admin','Stationsvej 2',1010101,'admin','1234','admin','2200',1,'kbh n');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -198,3 +204,4 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2021-05-28  3:15:21
+-- Dump completed on 2021-05-28  3:34:04
