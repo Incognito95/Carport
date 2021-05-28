@@ -22,6 +22,7 @@
                 <th scope="col">Længde</th>
                 <th scope="col">Bredde</th>
                 <th scope="col">Tag Type</th>
+                <th scope="col">Kunde ID</th>
                 <th>Se Stykliste</th>
                 <th>Se tegning</th>
             </tr>
@@ -33,6 +34,7 @@
                     <td>${orders.length}</td>
                     <td>${orders.width}</td>
                     <td>${orders.roof_type}</td>
+                    <td>${orders.customer_id}</td>
                     <td><a href="${pageContext.request.contextPath}/fc/seeonepieceslistpage" class="btn btn-primary">Se stykliste</a></td>
                     <td><a href="${pageContext.request.contextPath}/fc/showsvg" type="button" class="btn btn-primary">Se tegning</a></td>
                 </tr>

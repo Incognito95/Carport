@@ -58,7 +58,7 @@ public class OrderMapper
 
         try (Connection connection = database.connect())
         {
-            String sql = "SELECT * FROM orders WHERE customer_id BETWEEN ? AND ?";
+            String sql = "SELECT * FROM orders";
             User user = null;
 
             try (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS))
