@@ -8,7 +8,7 @@
 <img src="documents/design/Loginpage.png" width="200">
 <img src="documents/design/Om Os.png" width="200">
 <img src="documents/design/Ordre bekræftelse - almost done.png" width=“200”>
-<img src="documents/design/Profil" width=“200”>
+<img src="documents/design/Profil.png" width=“200”>
 <img src="documents/design/Se alle varer - done.png" width=“200”>
 <img src="documents/design/Se alle kunders forespørgelser - done.png" width=“200”>
 <img src="documents/design/Se alle sælger - done.png" width=“200”>
