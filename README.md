@@ -3,7 +3,6 @@
 <img src="documents/design/Login.png" width="200">
 <img src="documents/design/Om Os.png" width="200">
 <img src="documents/design/Profil.png" width="200">
-<img src="documents/design/Forside.png" width="200">
 <img src="documents/design/Kontakt.png" width="200">
 <img src="documents/design/Loginpage.png" width="200">
 <img src="documents/design/Change data.png" width="200">
