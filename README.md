@@ -23,5 +23,5 @@
 <img src="documents/design/kundeoversigt.png" width="200">
 <img src="documents/design/Se alle sælger.png" width="200">
 <img src="documents/design/Ordre bekræftelse - almost done.png" width="200">
-<img src="documents/design/customerviewrequestpage - done.png" width="200">
+<img src="documents/design/customerviewrequestspage - done.png" width="200">
 <img src="documents/design/Se alle kunders forespørgelser - done.png" width="200">
