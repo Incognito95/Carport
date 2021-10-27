@@ -1,5 +1,5 @@
 # FOG Carport
-<img src="documents/design/FAQ.png" width="50">
+<img src="documents/design/FAQ.png" width="100">
 <img src="documents/design/Login.png">
 <img src="documents/design/Om Os.png">
 <img src="documents/design/Profil.png">
