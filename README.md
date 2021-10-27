@@ -19,7 +19,6 @@
 <img src="documents/design/requestsentpage.png" width="200">
 <img src="documents/design/Tilføj ny sælger.png" width="200">
 <img src="documents/design/Se alle varer.png" width="200">
-<!-- <img src="documents/design/Se alle varer.png" width="200"> -->
 <img src="documents/design/kundeoversigt.png" width="200">
 <img src="documents/design/Se alle sælger.png" width="200">
 <img src="documents/design/Ordre bekræftelse - almost done.png" width=“200”>
