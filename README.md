@@ -16,8 +16,8 @@
 <img src="documents/design/Sælger Forside.png" width="200">
 <img src="documents/design/Tilføj ny sælger.png" width="200">
 <img src="documents/design/Tilføj ny varer.png" width="200">
-<img src="documents/design/customerviewrequestspage.png" width=“200”>
-<img src="documents/design/kundeoversigt - done.png" width=“200”>
-<img src="documents/design/registerpage.png" width=“200”>
-<img src="documents/design/requestpage.png" width=“200”>
-<img src="documents/design/requestsentpage.png" width=“200”>
+<img src="documents/design/customerviewrequestspage.png" width="200">
+<img src="documents/design/kundeoversigt - done.png" width="200">
+<img src="documents/design/registerpage.png" width="200">
+<img src="documents/design/requestpage.png" width="200">
+<img src="documents/design/requestsentpage.png" width="200">
