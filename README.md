@@ -5,9 +5,6 @@
 <img src="documents/design/Profil.png" width="200">
 <img src="documents/design/Forside.png" width="200">
 <img src="documents/design/Kontakt.png" width="200">
-<img src="documents/design/Template.png" width="200">
-<img src="documents/design/Forside-1.png" width="200">
-<img src="documents/design/Forside-2.png" width="200">
 <img src="documents/design/Loginpage.png" width="200">
 <img src="documents/design/Change data.png" width="200">
 <img src="documents/design/requestpage.png" width="200">
